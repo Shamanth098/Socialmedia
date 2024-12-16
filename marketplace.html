@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Back Button */
+        .back-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #008cbf;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .cart-button {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .cart-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-button a:hover {
+            background-color: #008cbf;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .product p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .product button {
+            background-color: #00d4ff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        .product button:hover {
+            background-color: #008cbf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="home.html">← Back to Home</a>
+    </div>
+
+    <!-- Marketplace -->
+    <div class="container">
+        <div class="cart-button">
+            <a href="cart.html">View Cart</a>
+        </div>
+
+        <h1>Marketplace</h1>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product" data-name="Laptop" data-price="50000">
+                <img src="/" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>Price: ₹50,000</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product" data-name="Phone" data-price="30000">
+                <img src="/" alt="Phone">
+                <h3>Smartphone</h3>
+                <p>Price: ₹30,000</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart(button) {
+            const product = button.parentElement;
+            const name = product.getAttribute('data-name');
+            const price = product.getAttribute('data-price');
+
+            cart.push({ name, price });
+            alert(${name} has been added to your cart.);
+        }
+
+        function buyNow() {
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+</html>

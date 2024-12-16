@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Section</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Back Button */
+        .back-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #008cbf;
+        }
+
+        /* Friends Section */
+        .friends-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Friend Card */
+        .friend-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .friend-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .friend-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .friend-card button {
+            background-color: #00d4ff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        .friend-card button:hover {
+            background-color: #008cbf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <!-- Friends Section -->
+    <h1 style="margin: 20px 0; color: #00d4ff;">Friends List</h1>
+    <div class="friends-container">
+        <!-- Friend 1 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Shamanth">
+            <h3>Shamanth</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 2 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Sanjay">
+            <h3>Sanjay</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 3 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Sampath">
+            <h3>Sampath</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 4 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Sevith">
+            <h3>Sevith</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 5 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Manoj">
+            <h3>Manoj</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 6 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Akhil">
+            <h3>Akhil</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Friend 7 -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Shan">
+            <h3>Shan</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Additional Friend -->
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Additional Friend">
+            <h3>Anil</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+
+        <div class="friend-card">
+            <img src="profile-placeholder.png" alt="Additional Friend">
+            <h3>Vikas</h3>
+            <button>Message</button>
+            <button>View Profile</button>
+        </div>
+    </div>
+</body>
+</html>

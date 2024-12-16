@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media</title>
+    <link rel="stylesheet" href="SCstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-left">
+            <img src="logo11.jpg" class="logo">
+            <ul>
+               <a href="notification.html"> <li><img src="notification.png" ></li></a>
+                <a href="message.html"><li><img src="inbox.png" ></li></a>
+                <a href="video.html"><li><img src="video.png" ></li></a>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                
+                <input type="text" placeholder="Search">
+                
+            </div>
+            <div class="login">
+            <a href="login.html">login</a>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--left-sidebar-->
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="news.html"><img src="news.png" >latest newse</a>
+                <a href="friends.html"><img src="friends.png" >friends</a>
+                <!-- <a href="a"><img src="group.png" >groups</a> -->
+                <a href="marketplace.html"><img src="marketplace.png" >marketplace</a>
+                <a href="a"><img src="watch.png" >watch</a>
+                
+            </div>
+            
+        </div>
+
+        <!--main-contene-->
+        <div class="main-contene">
+            
+            <!-- <div class="story-gallery">
+                <div class="story story1">
+                    <img src="upload.png">
+                    <p>Post stroy</p>
+                </div>
+                <div class="story story2">
+                    <img src="member-1.png">
+                    <p>John Deo</p>
+                </div>
+                <div class="story story3">
+                    <img src="member-2.png">
+                    <p>Alison</p>
+                </div>
+
+                <div class="story story4">
+                    <img src="member-3.png">
+                    <p>Jackson</p>
+                </div>
+
+                <div class="story story5">
+                    <img src="member-4.png">
+                    <p>Samona</p>
+                </div>
+
+
+            </div> -->
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="profile1.jpg" >
+                    <div>
+                        <p>Jone Nicholson</p>
+                        <small>public <i class="fa-solid fa-caret-down"></i></small>
+
+                    </div>
+                </div>
+
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="Comment "></textarea>
+
+                    <div class="add-post-links">
+                        <a href="#"><img src="live-video.png" >Live Video</a>
+                        <a href="#"><img src="photo.png" >photo</a>
+                        <a href="#"><img src="feeling.png" >feling</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+
+                    <div class="user-profile">
+                    <img src="profile1.jpg" >
+                    <div>
+                        <p>Jone Nicholson</p>
+                        <span>June 24 2021,10.21pm</span>
+
+                    </div>
+                </div>
+
+                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+
+                </div>
+                
+
+                <p class="post-text"><span>well come</span> to my social mideaa
+                    <a href="#">best webpage</a>
+                    <a href="#">instagram ID</a>
+                </p>
+                <img src="post11.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="post">
+        <button id="likeBtn" onclick="toggleLike()">👍 Like</button>
+        <span id="likeCount">0</span> Likes
+
+        <div class="comments-section">
+            <button id="commentBtn" onclick="addComment()"> Comment</button>
+            <input type="text" id="commentInput" placeholder="Write a comment...">
+            <div id="commentsList"></div>
+        </div>
+    </div>
+
+                    <div class="post-profile-icon">
+                        <img src="profile1.jpg" alt=""><i class="fa-solid fa-caret-down"></i>
+
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!--right-sidebar-->
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Event</h4>
+                <a href="#">See All</a>
+            </div>
+
+            <div class="event">
+                <div class="left-event">
+                    <h3>25</h3>
+                    <span>December</span>
+                </div>
+                <div class="right-event">
+                    <h4>christmas Day</h4>
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i></p>
+                    <a href="christmas.html">More Info</a>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="left-event">
+                    <h3>1</h3>
+                    <span>January</span>
+                </div>
+                <div class="right-event">
+                    <h4>New Year</h4>
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i></p>
+                    <a href="newyear.html">More Info</a>
+                </div>
+            </div>
+
+            <div class="sidebar-title">
+                <h4>Adertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="advertisement.png" class="sidebar-ads">
+
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Celebration</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #001f3f;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Back Button */
+        .back-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Main Content */
+        .content-container {
+            text-align: center;
+            background: #022d5c;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .content-container h1 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* New Year Image */
+        .newyear-image {
+            margin-top: 20px;
+        }
+
+        .newyear-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Fireworks Decoration */
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, #ffcc00, #ff6600);
+            border-radius: 50%;
+            transform-origin: center;
+            animation: firework 2s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes firework {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <!-- Fireworks for Decoration -->
+    <div class="fireworks">
+        <div class="firework" style="top: 20%; left: 40%; animation-delay: 0s;"></div>
+        <div class="firework" style="top: 10%; left: 60%; animation-delay: 0.2s;"></div>
+        <div class="firework" style="top: 30%; left: 50%; animation-delay: 0.4s;"></div>
+        <div class="firework" style="top: 15%; left: 70%; animation-delay: 0.6s;"></div>
+        <div class="firework" style="top: 25%; left: 30%; animation-delay: 0.8s;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <h1>New Year Celebration</h1>
+        <p>
+            New Year is celebrated globally on January 1st, marking the beginning of the Gregorian calendar. 
+            It is a time for new beginnings, resolutions, and celebrations. People around the world gather to 
+            enjoy grand parties, firework displays, and countdowns to midnight.
+        </p>
+        <p>
+            The day is also an opportunity to reflect on the past year and set goals for the coming one. 
+            Families and friends exchange greetings, gifts, and spend time together to welcome the New Year 
+            with joy and positivity.
+        </p>
+        <p>
+            Let’s ring in this New Year with happiness, hope, and a spirit of togetherness. Wishing you and 
+            your loved ones a prosperous and Happy New Year!
+        </p>
+
+        <div class="newyear-image">
+            <img src="/" alt="New Year Celebration">
+        </div>
+    </div>
+</body>
+</html>

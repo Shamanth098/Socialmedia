@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .message-container {
+            width: 90%;
+            max-width: 700px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .message-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .message {
+            background-color: #333;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+        }
+
+        .message img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        .message-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .message-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #00d4ff;
+            flex-grow: 1;
+        }
+
+        .message-content p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .message-content .timestamp {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .reply-box {
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .reply-box input {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            background-color: #555;
+            color: #fff;
+            outline: none;
+        }
+
+        .reply-box button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #00d4ff;
+            color: #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .reply-box button:hover {
+            background-color: #008cbf;
+        }
+
+        .reply-container {
+            margin-top: 10px;
+        }
+
+        .reply-container p {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #008cbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Messages</h1>
+        
+        <!-- Message 1 -->
+        <div class="message" data-name="Sanjay">
+            <img src="sanjay.jpg" alt="Sanjay's Profile Picture">
+            <div class="message-content">
+                <h3>Sanjay</h3>
+                <p>Hello! What are you doing?</p>
+                <p>Why did you not come to the college today?</p>
+                <span class="timestamp">2 days ago</span>
+            </div>
+            <div class="reply-container"></div>
+            <div class="reply-box">
+                <input type="text" placeholder="Type your reply..." />
+                <button>Reply</button>
+            </div>
+        </div>
+        
+        <!-- Message 2 -->
+        <div class="message" data-name="Sampath">
+            <img src="sampath.jpg" alt="Sampath's Profile Picture">
+            <div class="message-content">
+                <h3>Sampath</h3>
+                <p>Are you good now?</p>
+                <span class="timestamp">1 day ago</span>
+            </div>
+            <div class="reply-container"></div>
+            <div class="reply-box">
+                <input type="text" placeholder="Type your reply..." />
+                <button>Reply</button>
+            </div>
+        </div>
+
+        <!-- Message 3 -->
+        <div class="message" data-name="Abhishek">
+            <img src="abhishek.jpg" alt="Abhishek's Profile Picture">
+            <div class="message-content">
+                <h3>Abhishek</h3>
+                <p>Have you completed your project?</p>
+                <span class="timestamp">30 minutes ago</span>
+            </div>
+            <div class="reply-container"></div>
+            <div class="reply-box">
+                <input type="text" placeholder="Type your reply..." />
+                <button>Reply</button>
+            </div>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <script>
+        // Simulate a database for replies
+        const messages = document.querySelectorAll('.message');
+
+        messages.forEach(message => {
+            const replyButton = message.querySelector('button');
+            const replyInput = message.querySelector('input');
+            const replyContainer = message.querySelector('.reply-container');
+
+            replyButton.addEventListener('click', () => {
+                const replyText = replyInput.value.trim();
+                if (replyText) {
+                    // Append reply to the UI
+                    const replyElement = document.createElement('p');
+                    replyElement.textContent = replyText;
+                    replyContainer.appendChild(replyElement);
+
+                    // Clear input box
+                    replyInput.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

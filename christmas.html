@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Celebration</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Back Button */
+        .back-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #008cbf;
+        }
+
+        /* Main Content */
+        .content-container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .content-container h1 {
+            font-size: 36px;
+            color: #d62828;
+            margin-bottom: 20px;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Christmas Image */
+        .christmas-image {
+            margin-top: 20px;
+        }
+
+        .christmas-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Decorations */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10%;
+            color: #fff;
+            font-size: 1.2em;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <!-- Snowflakes for Decoration -->
+    <div class="snowflakes">
+        <span class="snowflake" style="left: 10%; animation-duration: 6s; animation-delay: 0s;">❄</span>
+        <span class="snowflake" style="left: 20%; animation-duration: 8s; animation-delay: 1s;">❅</span>
+        <span class="snowflake" style="left: 30%; animation-duration: 5s; animation-delay: 2s;">❄</span>
+        <span class="snowflake" style="left: 40%; animation-duration: 7s; animation-delay: 0.5s;">❅</span>
+        <span class="snowflake" style="left: 50%; animation-duration: 6s; animation-delay: 1s;">❄</span>
+        <span class="snowflake" style="left: 60%; animation-duration: 8s; animation-delay: 1.5s;">❅</span>
+        <span class="snowflake" style="left: 70%; animation-duration: 5s; animation-delay: 2.5s;">❄</span>
+        <span class="snowflake" style="left: 80%; animation-duration: 6s; animation-delay: 0.5s;">❅</span>
+        <span class="snowflake" style="left: 90%; animation-duration: 7s; animation-delay: 1s;">❄</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <h1>Christmas Celebration</h1>
+        <p>
+            Christmas is celebrated every year on December 25 to mark the birth of Jesus Christ.
+            It is a time of joy, giving, and togetherness. Families come together to exchange gifts, 
+            enjoy delicious feasts, and decorate their homes with Christmas trees, lights, and ornaments.
+        </p>
+        <p>
+            The day is also filled with traditions such as singing carols, attending church services, 
+            and sharing love and kindness with those in need. The spirit of Christmas reminds us to cherish
+            the moments we spend with our loved ones.
+        </p>
+        <p>
+            Let’s make this Christmas memorable with joy, gratitude, and a generous heart. Wishing you all
+            a very Merry Christmas!
+        </p>
+
+        <div class="christmas-image">
+            <img src="/" alt="Christmas Celebration">
+        </div>
+    </div>
+</body>
+</html>

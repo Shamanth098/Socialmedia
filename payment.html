@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .payment-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .payment-options label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #00d4ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #008cbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Payment Options</h1>
+        <div class="payment-options">
+            <label><input type="radio" name="payment" value="Google Pay"> Google Pay</label>
+            <label><input type="radio" name="payment" value="PhonePe"> PhonePe</label>
+            <label><input type="radio" name="payment" value="Paytm"> Paytm</label>
+            <label><input type="radio" name="payment" value="Net Banking"> Net Banking</label>
+            <label><input type="radio" name="payment" value="Other Banks"> Other Banks</label>
+        </div>
+        <button class="btn" onclick="completePayment()">Complete Payment</button>
+    </div>
+
+    <script>
+        function completePayment() {
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+            if (selectedPayment) {
+                alert(Payment successful using ${selectedPayment.value}!);
+                window.location.href = "index.html";
+            } else {
+                alert("Please select a payment method.");
+            }
+        }
+    </script>
+</body>
+</html>

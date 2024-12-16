@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Back Button */
+        .back-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: #1a1a1a;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #008cbf;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .cart-item p {
+            margin: 0;
+            color: #666;
+        }
+
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="marketplace.html">← Back to Marketplace</a>
+    </div>
+
+    <!-- Cart -->
+    <div class="container">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <div class="total" id="total-price">Total: ₹0</div>
+    </div>
+
+    <script>
+        // Simulating data for the cart
+        const cart = [
+            { name: 'Laptop', price: 50000 },
+            { name: 'Smartphone', price: 30000 }
+        ];
+
+        const cartItems = document.getElementById('cart-items');
+        const totalPrice = document.getElementById('total-price');
+
+        let total = 0;
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');S
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = <h3>${item.name}</h3><p>₹${item.price}</p>;
+            cartItems.appendChild(cartItem);
+            total += parseInt(item.price);
+        });
+
+        totalPrice.innerText = Total: ₹${total};
+    </script>
+</body>
+</html>
